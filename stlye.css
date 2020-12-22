@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*változó használat, azaz a többször használt CSS property-t elmentjük egy változóba és azt újra felhasználjuk*/
+/*extend használat*/
+h1 {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #ff0000;
+}
+
+/*nesting használat*/
+h1 {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: rotate(90deg) translate(-50%, -50%);
+          transform: rotate(90deg) translate(-50%, -50%);
+}
+
+h1:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.second-title {
+  color: green;
+  text-align: center;
+}
+
+.toggled-second-title {
+  color: red;
+  text-align: center;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+/*# sourceMappingURL=stlye.css.map */

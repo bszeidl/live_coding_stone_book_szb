@@ -1,0 +1,41 @@
+/*változó használat, azaz a többször használt CSS property-t elmentjük egy változóba és azt újra felhasználjuk*/
+$ferrari-red: #ff0000;
+
+
+/*extend használat*/
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: $ferrari-red;
+}
+
+
+h1 {
+	@extend %message-shared;
+}
+
+/*nesting használat*/@at-root
+h1 {
+  position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: rotate(90deg) translate(-50%, -50%);
+	
+  &:hover {
+    transform: scale(1.5);
+  }
+  
+}
+
+.second-title {
+  color: green;
+  text-align: center;
+}
+
+.toggled-second-title {
+  color: red;
+  text-align: center;
+  transform: scale(1.5);
+}
+
+
